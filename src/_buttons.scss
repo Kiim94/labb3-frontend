@@ -1,0 +1,6 @@
+//if/else
+$border-style-solid: true;
+
+$button-border-style:if($border-style-solid, solid, dashed);
+
+$button-border-color:black;

@@ -1,8 +1,9 @@
 @use '_images' as pictures;
 @use '_color-theme' as colors;
 @use '_navigation' as navigation;
+@use '_buttons' as button-style;
 
-@mixin container($max:1000px){
+@mixin container($max:900px){
   margin:0 auto;
   max-width:$max;
   padding:3rem;
@@ -25,6 +26,13 @@ header{
   position:relative;
 }
 
+footer{
+  background-color: var(--nav-bg);
+  display:flex;
+  gap:2rem;
+  justify-content:center;
+  font-weight:bold;
+}
 body{
   margin:0;
   padding:0;
@@ -50,23 +58,25 @@ section{
 
 .light-dark{
   background-color:colors.$button;
+  border:2px button-style.$button-border-style button-style.$button-border-color;
   color:white;
   @include button-style;
   &:hover{
     background-color:colors.$button-light;
-    &:active{
+  &:active{
       background-color:colors.$button-dark;
     }
   }
 }
 
 .mix-invert{
+  @extend .light-dark;
   @include button-style;
   background-color:colors.$button;
   color:white;
   &:hover{
     background-color:colors.$button-invert;
-    &:active{
+  &:active{
       background-color:colors.$button-mix;
     }
   }
@@ -78,7 +88,7 @@ section{
   color:white;
   &:hover{
     background-color:colors.$button-vivid;
-    &:active{
+  &:active{
       background-color:colors.$button-mute;
     }
   }
@@ -87,8 +97,15 @@ section{
 h1, h2{
   text-align:center;
 }
-@media (max-width:600px){
+@media (max-width: 900px){
   html{
     font-size:14px;
+    line-height:2;
+  }
+}
+
+@media (max-width:600px){
+  html{
+    font-size:12px;
   }
 }

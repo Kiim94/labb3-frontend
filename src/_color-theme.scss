@@ -1,15 +1,7 @@
 @use "sass:color";
 
+//color functions
 $button:#4a90e2;
-
-//if/else
-$dark-theme: true;
-
-@if $dark-theme{
-  $button: #1ae28f;
-} else{
-  $button:#4a90e2;
-}
 
 $button-light: lighten($button, 15%);
 $button-dark: darken($button, 15%);
@@ -32,7 +24,7 @@ $button-vivid: saturate($button, 20%);
   --links: #0066cc;  
   --section-bg: #aadedf;
 }
-
+//mörkt tema
 @media (prefers-color-scheme: dark) {
     :root{
     --body-bg: #111;
