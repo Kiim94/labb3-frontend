@@ -2,9 +2,10 @@
 @use '_color-theme' as colors;
 @use '_navigation' as navigation;
 
-@mixin container($max:1200px){
+@mixin container($max:1000px){
   margin:0 auto;
   max-width:$max;
+  padding:3rem;
 }
 
 @mixin button-style{
@@ -16,7 +17,7 @@
   font-size:1rem;
 }
 html{
-  font-size:18px;
+  font-size:16px;
   line-height:1.5;
   font-family: "Geist Mono", "Courier New", Courier, monospace;
 }
