@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <title>labb-3</title>
+  </head>
+  <h1>Labb3 - CSSpre-processorer</h1>
+  <header>
+    <button class="hamburger">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="sass.html">SASS</a></li>
+            <li><a href="images.html">Bilder</a></li>
+            <li><a href="#">Tom</a></li>
+            <li><a href="#">Tom</a></li>
+        </ul>
+    </nav>
+  </header>
+  <body>
+    <main>
+    <section>
+      <h2>Bilder</h2>
+      <button class="light-dark">Lighten/Darken</button>
+      <button class="mix-invert">Invert/mix</button>
+      <button class="vivid-muted">Vivid/mute</button>
+      <div class="pictures">
+        <picture>
+          <source srcset="./src/images/eldar-400.webp 400w,
+                          ./src/images/eldar-800.webp 800w"
+                  sizes="(max-width: 600px) 300px,
+                          500px"
+                  type="image/webp">
+          <img src="./src/images/eldar-800.jpg"
+                srcset="./src/images/eldar-400.jpg 400w
+                        ./src/images/eldar-800.jpg 800w"
+                sizes="(max-width:600px) 300px, 500px"
+                alt="Katt sitter på sten omringad av högt gräs">
+        </picture>
+        <picture>
+          <source srcset="./src/images/butterfly-400.webp 400w,
+                          ./src/images/butterfly-800.webp 800w"
+                  sizes="(max-width: 600px) 300px,
+                          500px"
+                  type="image/webp">
+          <img src="./src/images/butterfly-800.jpg"
+                srcset="./src/images/butterfly-400.jpg 400w
+                        ./src/images/butterfly-800.jpg 800w"
+                sizes="(max-width:600px) 300px, 500px"
+                alt="Citronfjäril hänger från grässtrå">
+        </picture>
+      </div>
+    </section>
+    </main>
+    <script type="module" src="/src/main.js" defer></script>
+  </body>
+</html>

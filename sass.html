@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <title>labb-3</title> 
+  </head>
+  <h1>Labb3 - CSSpre-processorer</h1>
+  <header>
+    <button class="hamburger">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="sass.html">SASS</a></li>
+            <li><a href="images.html">Bilder</a></li>
+            <li><a href="#">Tom</a></li>
+            <li><a href="#">Tom</a></li>
+        </ul>
+    </nav>
+  </header>
+  <body>
+    <main>
+    <section>
+      <h2>Om att använda SASS</h2>
+      <h3>Fördelar</h3>
+      <h4>Nesting</h4>
+      <p>Det blir lättare att hålla samma element inom samma sfär: med detta menar jag att exempelvis li element som tillhör navigering
+        går att hitta tillsammans med navigeringen.
+      </p>
+      <p>Jag ser också att det går att "banta ner" koden något. Istället för att skriva rader med nav, nav ul, nav ul li och så vidare så går 
+        det istället att bygga på samma struktur. Ungefär som att lägga till legobitar för att bygga ett torn.
+      </p>
+      <h4>Partials</h4>
+      <p>Betydligt bekvämare och mindre press att felsöka och koda vidare! Du möts inte av en vägg av kod som du måste vada igenom.</p>
+    </section>
+    <section>
+      <h3>Nackdelar</h3>
+      <h4>Nesting</h4>
+      <p>Samtidigt som det är lättare att samla de element som hör ihop med varandra, så är det också enkelt att missförstå var man befinner sig,
+        åtminstone i början. Personligen upplevde jag att jag inte visste var jag skulle placera element om jag ville exempelvis använda hover: hur
+        kunde jag "nesta" det utan större problem?
+      </p>
+      <h4>Partials</h4>
+      <p>Det är lätt att, om man inte är försiktig, att skapa väldigt många partials. Och när något sedan inte fungerar kan det bli lite knepigt att 
+        lista ut vilken partial som var problemet.</p> 
+        <p>(Jag upptäckte detta genom att ha desktop navigering css i huvud scss filen. breakpoints var en 
+        partial. För att göra hamburgermeny arbetade jag i min partial, men upptäckte senare att ingenting fungerade. Visade sig att detta sätt
+        gjorde att hamburgermenyn blev för evigt dold. Gick att lösa genom att flytta all navigation till en egen partial och ta bort breakpoints
+        partial istället)</p>
+    </section>
+    <div id="app"></div>
+  </main>
+    <script type="module" src="/src/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+@use '_images' as pictures;
+@use '_color-theme' as colors;
+@use '_navigation' as navigation;
+
+@mixin container($max:1200px){
+  margin:0 auto;
+  max-width:$max;
+}
+
+@mixin button-style{
+  cursor:pointer;
+  display:block;
+  margin:0 auto;
+  margin-bottom:1rem;
+  padding:0.5rem;
+  font-size:1rem;
+}
+html{
+  font-size:18px;
+  line-height:1.5;
+  font-family: "Geist Mono", "Courier New", Courier, monospace;
+}
+header{
+  position:relative;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background-color:var(--body-bg);
+  color:var(--body-text);
+}
+
+section{
+  display:block;
+  padding: 1rem;
+  @include container;
+  background-color: var(--section-bg);
+  li{
+    margin-top:0.8rem;
+  }
+}
+
+.light-dark{
+  background-color:colors.$button;
+  color:white;
+  @include button-style;
+  &:hover{
+    background-color:colors.$button-light;
+    &:active{
+      background-color:colors.$button-dark;
+    }
+  }
+}
+
+.mix-invert{
+  @include button-style;
+  background-color:colors.$button;
+  color:white;
+  &:hover{
+    background-color:colors.$button-invert;
+    &:active{
+      background-color:colors.$button-mix;
+    }
+  }
+}
+
+.vivid-muted{
+  @include button-style;
+  background-color:colors.$button;
+  color:white;
+  &:hover{
+    background-color:colors.$button-vivid;
+    &:active{
+      background-color:colors.$button-mute;
+    }
+  }
+}
+
+h1, h2{
+  text-align:center;
+}
+@media (max-width:600px){
+  html{
+    font-size:14px;
+  }
+}
