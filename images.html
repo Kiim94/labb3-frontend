@@ -28,31 +28,33 @@
     <main>
     <section>
       <h2>Bilder</h2>
-      <button class="light-dark">Lighten/Darken</button>
-      <button class="mix-invert">Invert/mix</button>
-      <button class="vivid-muted">Vivid/mute</button>
+      <div class="buttons">
+        <button class="light-dark">Lighten/Darken</button>
+        <button class="mix-invert">Invert/mix</button>
+        <button class="vivid-muted">Vivid/mute</button>
+      </div>
       <div class="pictures">
         <picture>
-          <source srcset="./src/images/eldar-400.webp 400w,
-                          ./src/images/eldar-800.webp 800w"
+          <source srcset="/src/images/eldar-400.webp 400w,
+                          /src/images/eldar-800.webp 800w"
                   sizes="(max-width: 600px) 300px,
                           500px"
                   type="image/webp">
-          <img src="./src/images/eldar-800.jpg"
-                srcset="./src/images/eldar-400.jpg 400w
-                        ./src/images/eldar-800.jpg 800w"
+          <img src="/src/images/eldar-800.jpg"
+                srcset="/src/images/eldar-400.jpg 400w,
+                        /src/images/eldar-800.jpg 800w"
                 sizes="(max-width:600px) 300px, 500px"
                 alt="Katt sitter på sten omringad av högt gräs">
         </picture>
         <picture>
-          <source srcset="./src/images/butterfly-400.webp 400w,
-                          ./src/images/butterfly-800.webp 800w"
+          <source srcset="/src/images/butterfly-400.webp 400w,
+                          /src/images/butterfly-800.webp 800w"
                   sizes="(max-width: 600px) 300px,
                           500px"
                   type="image/webp">
-          <img src="./src/images/butterfly-800.jpg"
-                srcset="./src/images/butterfly-400.jpg 400w
-                        ./src/images/butterfly-800.jpg 800w"
+          <img src="/src/images/butterfly-800.jpg"
+                srcset="/src/images/butterfly-400.jpg 400w,
+                        /src/images/butterfly-800.jpg 800w"
                 sizes="(max-width:600px) 300px, 500px"
                 alt="Citronfjäril hänger från grässtrå">
         </picture>

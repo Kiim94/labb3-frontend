@@ -42,6 +42,12 @@ section{
   }
 }
 
+.buttons{
+  display:flex;
+  max-width:500px;
+  margin:0 auto;
+}
+
 .light-dark{
   background-color:colors.$button;
   color:white;
