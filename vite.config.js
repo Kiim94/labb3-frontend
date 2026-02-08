@@ -26,6 +26,7 @@ export default defineConfig({
                 main: resolve(__dirname, "index.html"),
                 sass: resolve(__dirname, "sass.html"),
                 images: resolve(__dirname, "images.html"),
+                iforelse: resolve(__dirname, "if-else-buttons.html"),
             }
         }
     }

@@ -1,5 +1,10 @@
 @use "sass:color";
 
+
+@mixin side-border($width, $color){
+  border-left:$width solid $color;
+  border-right:$width solid $color;
+}
 //color functions
 $button:#4a90e2;
 
@@ -23,6 +28,7 @@ $button-vivid: saturate($button, 20%);
   --hover-links: #72423e;
   --links: #0066cc;  
   --section-bg: #aadedf;
+  --section-border: #d87c76;
 }
 //mörkt tema
 @media (prefers-color-scheme: dark) {
@@ -35,5 +41,6 @@ $button-vivid: saturate($button, 20%);
     --hover-links: #442418;
     --links: #3f9abe;
     --section-bg: #222;
+    --section-border: #be633f;
     }
 }

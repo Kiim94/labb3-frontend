@@ -6,21 +6,14 @@
 @mixin container($max:900px){
   margin:0 auto;
   max-width:$max;
-  padding:3rem;
+  padding:1rem 3rem;
+  line-height:2;
 }
 
-@mixin button-style{
-  cursor:pointer;
-  display:block;
-  margin:0 auto;
-  margin-bottom:1rem;
-  padding:0.5rem;
-  font-size:1rem;
-}
 html{
-  font-size:16px;
-  line-height:1.5;
-  font-family: "Geist Mono", "Courier New", Courier, monospace;
+  font-size:18px;
+  font-family:"Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
 }
 header{
   position:relative;
@@ -42,70 +35,24 @@ body{
 
 section{
   display:block;
-  padding: 1rem;
   @include container;
+  @include colors.side-border(4px, var(--section-border));
   background-color: var(--section-bg);
+  p{
+    margin-bottom:1.3rem;
+  }
   li{
     margin-top:0.8rem;
   }
 }
 
-.buttons{
-  display:flex;
-  max-width:500px;
-  margin:0 auto;
-}
-
-.light-dark{
-  background-color:colors.$button;
-  border:2px button-style.$button-border-style button-style.$button-border-color;
-  color:white;
-  @include button-style;
-  &:hover{
-    background-color:colors.$button-light;
-  &:active{
-      background-color:colors.$button-dark;
-    }
-  }
-}
-
-.mix-invert{
-  @extend .light-dark;
-  @include button-style;
-  background-color:colors.$button;
-  color:white;
-  &:hover{
-    background-color:colors.$button-invert;
-  &:active{
-      background-color:colors.$button-mix;
-    }
-  }
-}
-
-.vivid-muted{
-  @include button-style;
-  background-color:colors.$button;
-  color:white;
-  &:hover{
-    background-color:colors.$button-vivid;
-  &:active{
-      background-color:colors.$button-mute;
-    }
-  }
-}
 
 h1, h2{
   text-align:center;
 }
-@media (max-width: 900px){
-  html{
-    font-size:14px;
-    line-height:2;
-  }
-}
 
 @media (max-width:600px){
   html{
-    font-size:12px;
+    font-size:16px;
   }
 }
